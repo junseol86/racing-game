@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>터보 다운힐 레이서</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="game-shell">
+    <section class="intro-panel" aria-label="게임 설명">
+      <p class="eyebrow">Vertical Scroll Racing</p>
+      <h1>터보 다운힐 레이서</h1>
+      <p>
+        좌우로 차선을 바꾸며 교통을 피하고, 별 코인을 모아 최고 점수를 노려보세요.
+        속도는 시간이 지날수록 점점 빨라집니다.
+      </p>
+      <ul class="controls-list">
+        <li><kbd>←</kbd><kbd>→</kbd> 또는 <kbd>A</kbd><kbd>D</kbd> 이동</li>
+        <li><kbd>Space</kbd> 일시정지 / 재개</li>
+        <li>모바일에서는 화면 좌우를 터치</li>
+      </ul>
+    </section>
+
+    <section class="game-card" aria-label="레이싱 게임">
+      <div class="hud" aria-live="polite">
+        <div><span>점수</span><strong id="score">0</strong></div>
+        <div><span>속도</span><strong id="speed">1x</strong></div>
+        <div><span>코인</span><strong id="coins">0</strong></div>
+      </div>
+
+      <div id="track" class="track" tabindex="0" aria-label="게임 트랙">
+        <div class="road-lines" aria-hidden="true"></div>
+        <div id="player" class="car player" aria-label="플레이어 자동차"></div>
+        <div id="overlay" class="overlay">
+          <h2 id="overlayTitle">준비됐나요?</h2>
+          <p id="overlayText">시작 버튼을 누르면 질주가 시작됩니다.</p>
+          <button id="startButton" type="button">게임 시작</button>
+        </div>
+      </div>
+
+      <div class="touch-controls" aria-label="터치 조작">
+        <button id="leftButton" type="button">왼쪽</button>
+        <button id="rightButton" type="button">오른쪽</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
